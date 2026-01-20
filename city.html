@@ -9,16 +9,22 @@
 
 <body>
     <div class="container">
-    <!—- TODO (HTML #4):
-    HEADER SECTION (copy the same structure from index.html)
-    1) Create a <header> with class="site-header"
-    2) Add an <h1> for the site title: Edmonton Travel Blog
-    3) Add a <p> that describes the current page (example: About the City)
-    4) Add the navigation menu using <nav class="site-nav"> with a <ul> list
-    - Each menu item is a <li> containing an <a> link
-    - Use the SAME menu on every page for consistency
-    - Only change which link has class="active" (the current page)
-    -->
+    <!-- To Do (HTML #4)-->
+    <header class="site-header">
+        <h1>Edmonton Travel Blog</h1>
+        <p>Discover what experiences and hidden gems Edmonton has to offer!</p>
+        <nav class="site-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="city.html">About the City</a></li>
+                <li><a href="video.html">Video</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+
         <main class="layout">
             <section class="main">
                 <div class="card">
@@ -31,22 +37,40 @@
                             shops that are easy to explore on foot.
                         </p>
                         <h3>What Visitors Enjoy</h3>
-                            <!-- TODO (HTML #5):
-                            Add a <ul> list with 4 items. -->
+                            <!-- To Do (HTML #5)-->
+                            <ul>
+                                <li><strong>West Edmonton Mall:</strong> The largest shopping and entertainment complex in North America, featuring waterparks, theme parks, and hundreds of stores</li>
+                                <li><strong>Royal Alberta Museum:</strong> Explore natural and human history in Western Canada's largest museum</li>
+                                <li><strong>Muttart Conservatory:</strong> Unique pyramid-shaped glass structures housing diverse plant life</li>
+                                <li><strong>Fort Edmonton Park:</strong> Canada's largest living history museum, located in the River Valley</li>
+                            </ul>
 
-                            <!-- TODO (HTML #6):
-                            Create a header stating “Best Time to Visit” and Write 2–4 sentences.
-                            -->
+                            <!-- To Do (HTML #6)-->
+                            <h3>Best Time to Visit</h3>
+                            <p>
+                                The best time to visit Edmonton depends on your interests: Visit in the Summer (June-August) for the festivals and outdoor activities.
+                                Fall (September-October) provides beautiful foliage with fewer crowds and lower costs. Winter (December-February) is ideal for snow sports and unique events like Ice on Whyte but is very cold.
+                                Finally Spring (March-May) brings blooming flowers and mild weather, great for a quieter trip before the summer rush. 
+                            </p>
+
                         <div class="tags">
                             <span class="tag">Parks</span>
                             <span class="tag">Festivals</span>
                             <span class="tag">City life</span>
                         </div>
                     </div>
-                    <!-- TODO (HTML #7):
-                    Add a second card titled “One-Day Itinerary”
-                    containing an <ol> list with 4 steps.
-                    -->
+                
+                    <!-- To Do (HTML #7)-->
+                    <div class="card">
+                        <h2>One-Day Itinerary</h2>
+                        <ol>
+                            <li><strong>Morning:</strong> Start your day at West Edmonton Mall the largest mall Edmonton has to offer. Containing 800+ stores, you can grab breakfast and explore unique attractions like the World Waterpark with its indoor pool or the Galaxyland amusement park with roller coasters.</li>
+                            <li><strong>Late Morning:</strong> Visit the Royal Alberta Museum to learn about Alberta's natural and human history </li>
+                            <li><strong>Afternoon</strong> At this time, visit the Muttart Conservatory, known for its glass pyramids that house botanical collections from around the world. A unique architectural and natural spot perfect for an hour or so of exploration. </li> 
+                            <li><strong>Evening:</strong> End your day by enjoying dinner at one of the many restaurants along Whyte Avenue or Jasper Avenue downtown. After your meal, feel free to experience the nightlife that Edmonton has to offer by visiting a pub or catching a live performance at one of the many local venues.</li>
+                        </ol>
+                    </div>
+
             </section>
             <aside class="sidebar">
                 <div class="card">
