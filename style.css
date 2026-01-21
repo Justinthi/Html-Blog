@@ -100,6 +100,12 @@ body{
 */
 .site-nav a{
  /* add properties here */
+ color: var(--white);
+ text-decoration: none;
+ padding: 10px 18px;
+ display: inline-block;
+ border-radius: 6px;
+ transition: background-color 0.2s;
 }
 /* TODO (CSS #2): Hover effect
  Target: .site-nav a:hover
@@ -109,7 +115,7 @@ body{
  - optionally change underline/border effect instead of background (design choice)
 */
 .site-nav a:hover{
- /* add properties here */
+    background: var(--accent);
 }
 /* TODO (CSS #3): Active link highlight
  Target: .site-nav a.active
@@ -122,16 +128,17 @@ body{
  Keep it visually consistent with your hover style.
 */
 .site-nav a.active{
- /* add properties here */
+    background: rgba(225, 225, 225, 0.18);
+ 
 }
 /* Two-column layout (Flexbox)
  You may keep this as-is or modify later in the Design Studio.
  Typical values:
  - gap: 12px–28px */
 .layout{
- margin-top: 20px;
+ margin-top: 12px;
  display:flex;
- gap:20px;
+ gap:12px;
 }
 .main{ flex:2; }
 .sidebar{ flex:1; }
@@ -147,7 +154,10 @@ body{
  - slightly different background (very light tint)
 */
 .sidebar{
- /* add properties here */
+    background: var(--white);
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
 }
 /* TODO (CSS #5): Card styling (Box Model)
  Target: .card
@@ -162,7 +172,11 @@ body{
  - box-shadow for depth (subtle; do not overdo)
 */
 .card{
- /* add properties here */
+    background: var(--white);
+    padding: 14px;
+    margin-bottom: 12px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
 }
 /* TODO (CSS #6): Meta line
  Target: .meta
@@ -173,7 +187,9 @@ body{
  - margin-bottom: 6px–12px
 */
 .meta{
- /* add properties here */
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 8px;
 }
 /* TODO (CSS #7): Tag “pill” styling
  Target: .tag
@@ -189,7 +205,14 @@ body{
  - text color: var(--primary) or var(--text)
 */
 .tag{
- /* add properties here */
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 2px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--white);
+    color: var(--text);
+    font-size: 0.85rem;
 }
 /* TODO (CSS #8): Video container
  Target: .video-wrap
@@ -201,7 +224,10 @@ body{
  - background: #000 (prevents white gaps around the video)
 */
 .video-wrap{
- /* add properties here */
+ border: 1px solid var(--border);
+ border-radius: 12px;
+ overflow: hidden;
+ background: #000;
 }
 .video-wrap iframe{
  width:100%;
@@ -219,6 +245,8 @@ body{
  - a subtle background tint
  - a stronger border-left accent
  */
+    border-left: 2px solid var(--accent);
+    padding-left: 20px;
 }
 /* TODO (CSS #9): Notice styling
  Target: .notice
@@ -232,7 +260,11 @@ body{
  - slightly muted text color
 */
 .notice{
- /* add properties here */
+    border: 1px dashed #bbb;
+    padding: 10px;
+    border-radius: 10px;
+    background: #fafafa;
+    color: #555;
 }
 /* Footer
  You can adjust padding and color, but keep it readable. */
