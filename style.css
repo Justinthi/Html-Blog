@@ -6,8 +6,7 @@
  - Keep the selectors as they are (e.g., .site-nav a). Only add properties inside
 { }.
  - Use Chapter 6 variables with var(--name) whenever possible.
- - Use the Box Model (padding, margin, border, border-radius) to create spacing
-and “button/card” looks.
+ - Use the Box Model (padding, margin, border, border-radius) to create spacing and button/card looks
  - After each edit: Save → Refresh the browser.
  DEBUG TIP (Chapter 4 cascade):
  If a style does not apply, check:
@@ -53,7 +52,7 @@ body{
  margin: 0 auto;
  padding: 20px;
 }
-/* Header “banner”
+/* Header "banner"
  You can adjust:
  - padding (e.g., 16px–28px)
  - border-radius (e.g., 8px–16px)
@@ -91,15 +90,16 @@ body{
  - text color: usually var(--white)
  - remove underline: text-decoration (often 'none')
  - padding: increases clickable area (common: vertical 8–12px, horizontal 12–22px)
- - display: use inline-block so padding/background behave like a “button”
+ - display: use inline-block so padding/background behave like a "button"
  - border-radius: rounding (common: 4px–12px; or 999px for pill style)
  - transition: smooth hover effect (often background-color 0.2s–0.3s)
  Optional additions:
  - background for non-hover state (transparent or subtle)
  - font-weight (normal/bold)
 */
+
+/* Design Studio A1: Button bar (default) */
 .site-nav a{
- /* add properties here */
  color: var(--white);
  text-decoration: none;
  padding: 10px 18px;
@@ -107,6 +107,7 @@ body{
  border-radius: 6px;
  transition: background-color 0.2s;
 }
+
 /* TODO (CSS #2): Hover effect
  Target: .site-nav a:hover
  You should define what changes when the mouse hovers:
@@ -117,9 +118,10 @@ body{
 .site-nav a:hover{
     background: var(--accent);
 }
+
 /* TODO (CSS #3): Active link highlight
  Target: .site-nav a.active
- This should make the current page link look “selected.”
+ This should make the current page link look "selected."
  Common approaches (choose one):
  - subtle background (semi-transparent white)
  - underline or border-bottom
@@ -129,12 +131,13 @@ body{
 */
 .site-nav a.active{
     background: rgba(225, 225, 225, 0.18);
- 
 }
+
 /* Two-column layout (Flexbox)
  You may keep this as-is or modify later in the Design Studio.
  Typical values:
  - gap: 12px–28px */
+/* Design Studio C1: Two-column (default) */
 .layout{
  margin-top: 12px;
  display:flex;
@@ -142,6 +145,7 @@ body{
 }
 .main{ flex:2; }
 .sidebar{ flex:1; }
+
 /* TODO (CSS #4): Sidebar card look
  Target: .sidebar
  Goal: Make the sidebar area look like a clean panel.
@@ -159,6 +163,7 @@ body{
     border: 1px solid var(--border);
     border-radius: 12px;
 }
+
 /* TODO (CSS #5): Card styling (Box Model)
  Target: .card
  Goal: Make every card look like a readable block.
@@ -171,13 +176,17 @@ body{
  Optional:
  - box-shadow for depth (subtle; do not overdo)
 */
+
+/* Design Studio B2: Shadow cards
+*/
 .card{
     background: var(--white);
     padding: 14px;
     margin-bottom: 12px;
-    border: 1px solid var(--border);
     border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 }
+
 /* TODO (CSS #6): Meta line
  Target: .meta
  Goal: Smaller, less prominent text than body content.
@@ -191,7 +200,8 @@ body{
     color: #777;
     margin-bottom: 8px;
 }
-/* TODO (CSS #7): Tag “pill” styling
+
+/* TODO (CSS #7): Tag "pill" styling
  Target: .tag
  Goal: Tags should look like pill labels.
  Typical properties:
@@ -214,6 +224,7 @@ body{
     color: var(--text);
     font-size: 0.85rem;
 }
+
 /* TODO (CSS #8): Video container
  Target: .video-wrap
  Goal: The iframe should appear inside a neat frame with rounded corners.
@@ -235,6 +246,7 @@ body{
  border:0;
  display:block;
 }
+
 /* ID selector example: styles ONLY the element with id="featured-video"
  Use this to emphasize the featured section (more specific than .card). */
 #featured-video{
@@ -248,6 +260,7 @@ body{
     border-left: 2px solid var(--accent);
     padding-left: 20px;
 }
+
 /* TODO (CSS #9): Notice styling
  Target: .notice
  Goal: Make instruction boxes stand out.
@@ -266,10 +279,21 @@ body{
     background: #fafafa;
     color: #555;
 }
+
 /* Footer
  You can adjust padding and color, but keep it readable. */
 .site-footer{
  text-align:center;
  padding:18px 10px;
  color:#555;
+}
+
+/* Enable Dark theme: To enable: Change <body> to <body class="theme-dark"> in the HTML files */
+.theme-dark{
+ --bg:#0f172a;
+ --text:#e5e7eb;
+ --primary:#111827;
+ --accent:#38bdf8;
+ --white:#111827;
+ --border:#334155;
 }
